@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 import torch
 
-from flashseg.cfg.config import Config, get_config
+from flashseg.cfg.config import get_config
 from flashseg.models.build import build_model
 
 logger = logging.getLogger(__name__)

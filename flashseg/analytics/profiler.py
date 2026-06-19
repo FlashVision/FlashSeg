@@ -25,7 +25,7 @@ class Profiler:
 
     def run(self) -> dict:
         """Profile model and print per-module statistics."""
-        dummy = torch.randn(1, 3, self.input_size, self.input_size)
+        torch.randn(1, 3, self.input_size, self.input_size)
 
         results = {}
         for name, module in self.model.named_children():

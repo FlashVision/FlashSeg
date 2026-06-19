@@ -1,6 +1,7 @@
 """Run segmentation on an image."""
 
 import cv2
+
 from flashseg import Predictor
 
 predictor = Predictor(

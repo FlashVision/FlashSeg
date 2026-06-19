@@ -1,8 +1,8 @@
 """Test loss functions."""
 
 import torch
-import pytest
-from flashseg.losses import CrossEntropyLoss, DiceLoss, FocalLoss, CombinedLoss
+
+from flashseg.losses import CombinedLoss, CrossEntropyLoss, DiceLoss, FocalLoss
 
 
 def test_cross_entropy():

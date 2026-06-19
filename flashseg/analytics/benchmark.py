@@ -1,7 +1,7 @@
 """Model benchmarking for segmentation."""
 
-import time
 import logging
+import time
 
 import torch
 

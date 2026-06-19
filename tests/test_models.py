@@ -1,7 +1,8 @@
 """Test FlashSeg models."""
 
-import torch
 import pytest
+import torch
+
 from flashseg.cfg.config import get_config
 from flashseg.models.build import build_model
 

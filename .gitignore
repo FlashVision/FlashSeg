@@ -10,4 +10,4 @@ workspace/
 .env
 .venv/
 venv/
-data/
+/data/

@@ -1,17 +1,15 @@
 """FlashSeg Trainer."""
 
 import logging
-import time
 from pathlib import Path
 from typing import Optional
 
 import torch
-import torch.nn as nn
 from torch.cuda.amp import GradScaler, autocast
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from flashseg.cfg.config import Config, get_config, load_yaml_config
+from flashseg.cfg.config import get_config, load_yaml_config
 from flashseg.data.dataset import SegmentationDataset
 from flashseg.data.transforms import get_train_transforms, get_val_transforms
 from flashseg.losses import CombinedLoss

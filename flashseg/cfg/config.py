@@ -1,11 +1,9 @@
 """Configuration management for FlashSeg."""
 
 from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict
 
 import yaml
-
 
 MODEL_SIZE_MAP = {
     "n": {"width_mult": 0.25, "depth_mult": 0.33},

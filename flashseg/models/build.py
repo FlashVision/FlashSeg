@@ -5,8 +5,8 @@ import torch.nn as nn
 
 from flashseg.cfg.config import Config
 from flashseg.models.backbone.shufflenetv2 import ShuffleNetV2
-from flashseg.models.neck.fpn import FPN
 from flashseg.models.head.seg_head import SegHead
+from flashseg.models.neck.fpn import FPN
 
 
 def build_model(config: Config) -> nn.Module:

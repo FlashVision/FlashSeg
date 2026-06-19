@@ -1,7 +1,7 @@
 """Segmentation visualization utilities."""
 
-import numpy as np
 import cv2
+import numpy as np
 
 
 def generate_colormap(num_classes: int) -> np.ndarray:

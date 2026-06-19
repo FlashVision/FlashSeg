@@ -2,7 +2,6 @@
 
 import argparse
 import logging
-import sys
 
 from flashseg import __version__
 
@@ -167,8 +166,8 @@ def _run_check():
         checks.append(("FlashSeg", f"ERROR: {e}"))
 
     try:
-        from flashseg.models.build import build_model
         from flashseg.cfg.config import get_config
+        from flashseg.models.build import build_model
         config = get_config(model_size="m", input_size=512, num_classes=21)
         model = build_model(config)
         params = sum(p.numel() for p in model.parameters())

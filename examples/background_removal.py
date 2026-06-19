@@ -1,6 +1,7 @@
 """Remove background from an image."""
 
 import cv2
+
 from flashseg import Predictor
 from flashseg.solutions import BackgroundRemover
 

@@ -1,7 +1,7 @@
 """Segmentation metrics."""
 
-import torch
 import numpy as np
+import torch
 
 
 def compute_miou(pred: torch.Tensor, target: torch.Tensor, num_classes: int, ignore_index: int = 255) -> float:
