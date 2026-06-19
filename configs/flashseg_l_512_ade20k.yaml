@@ -1,0 +1,26 @@
+model_size: l
+input_size: 512
+num_classes: 150
+backbone: shufflenetv2
+neck: fpn
+head: seg_head
+
+epochs: 160
+batch_size: 8
+lr: 0.01
+momentum: 0.9
+weight_decay: 0.0005
+warmup_epochs: 10
+scheduler: cosine
+amp: true
+
+train_images: data/ade20k/train/images
+train_masks: data/ade20k/train/masks
+val_images: data/ade20k/val/images
+val_masks: data/ade20k/val/masks
+
+augment: true
+num_workers: 8
+pretrained: true
+save_dir: workspace/flashseg_l_512_ade20k
+device: cuda

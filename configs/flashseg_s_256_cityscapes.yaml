@@ -1,0 +1,26 @@
+model_size: s
+input_size: 256
+num_classes: 19
+backbone: shufflenetv2
+neck: fpn
+head: seg_head
+
+epochs: 150
+batch_size: 32
+lr: 0.02
+momentum: 0.9
+weight_decay: 0.0005
+warmup_epochs: 5
+scheduler: cosine
+amp: true
+
+train_images: data/cityscapes/train/images
+train_masks: data/cityscapes/train/masks
+val_images: data/cityscapes/val/images
+val_masks: data/cityscapes/val/masks
+
+augment: true
+num_workers: 8
+pretrained: true
+save_dir: workspace/flashseg_s_256_cityscapes
+device: cuda

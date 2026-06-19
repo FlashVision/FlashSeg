@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.onnx
+workspace/
+*.pth
+*.pt
+.env
+.venv/
+venv/
+data/

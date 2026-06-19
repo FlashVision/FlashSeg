@@ -1,0 +1,31 @@
+model_size: m
+input_size: 512
+num_classes: 21
+backbone: shufflenetv2
+neck: fpn
+head: seg_head
+
+epochs: 50
+batch_size: 16
+lr: 0.005
+momentum: 0.9
+weight_decay: 0.0001
+warmup_epochs: 3
+scheduler: cosine
+amp: false
+
+use_lora: true
+lora_rank: 8
+lora_alpha: 16
+lora_variant: standard
+
+train_images: data/custom/train/images
+train_masks: data/custom/train/masks
+val_images: data/custom/val/images
+val_masks: data/custom/val/masks
+
+augment: true
+num_workers: 4
+pretrained: true
+save_dir: workspace/flashseg_m_512_lora
+device: cuda
