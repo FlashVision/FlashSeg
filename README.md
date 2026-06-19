@@ -5,6 +5,7 @@
 <h1 align="center">FlashSeg</h1>
 
 <p align="center">
+  <a href="https://pypi.org/project/flashseg/"><img src="https://img.shields.io/pypi/v/flashseg?color=blue&logo=pypi&logoColor=white" alt="PyPI"></a>
   <a href="https://github.com/FlashVision/FlashSeg/actions"><img src="https://img.shields.io/github/actions/workflow/status/FlashVision/FlashSeg/ci.yml?logo=github" alt="CI"></a>
   <img src="https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch&logoColor=white" alt="PyTorch">
   <img src="https://img.shields.io/badge/Python-3.8+-3776ab?logo=python&logoColor=white" alt="Python">
@@ -41,8 +42,18 @@ flashseg predict --model best.pth --source images/
 
 ## Installation
 
+### pip (recommended)
+
 ```bash
-# From source
+pip install flashseg
+
+# With all extras
+pip install "flashseg[all]"
+```
+
+### From source (for development)
+
+```bash
 git clone https://github.com/FlashVision/FlashSeg.git
 cd FlashSeg
 pip install -e ".[all]"
