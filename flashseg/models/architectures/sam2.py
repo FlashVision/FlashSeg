@@ -14,7 +14,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .sam import SAMImageEncoder, SAMPromptEncoder, SAMMaskDecoder
+from .sam import SAMImageEncoder, SAMMaskDecoder, SAMPromptEncoder
 
 logger = logging.getLogger(__name__)
 

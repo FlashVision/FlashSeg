@@ -9,7 +9,7 @@ References:
 
 import logging
 import math
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Dict, Optional, Tuple
 
 import torch
 import torch.nn as nn

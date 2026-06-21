@@ -10,7 +10,6 @@ from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
 
 logger = logging.getLogger(__name__)
@@ -94,7 +93,7 @@ def compute_mask_ap(
             n_gt = len(cls_gt_idx)
             cls_pred_masks = [pred_masks[i] for i in cls_pred_idx]
             cls_gt_masks = [gt_masks[i] for i in cls_gt_idx]
-            cls_scores = [pred_scores[i] for i in cls_pred_idx]
+            [pred_scores[i] for i in cls_pred_idx]
 
             if not cls_pred_masks:
                 class_aps.append(0.0)

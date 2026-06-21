@@ -53,7 +53,7 @@ def test_instance_segmentor_process():
 
 
 def test_panoptic_pq():
-    from flashseg.tasks.panoptic import compute_pq, PanopticSegment
+    from flashseg.tasks.panoptic import PanopticSegment, compute_pq
 
     H, W = 32, 32
     pred_map = np.zeros((H, W), dtype=np.int32)
@@ -98,7 +98,7 @@ def test_panoptic_segmentor_merge():
 
 
 def test_interactive_session():
-    from flashseg.tasks.interactive import InteractiveSession, PromptPoint
+    from flashseg.tasks.interactive import InteractiveSession
 
     session = InteractiveSession(image_size=(256, 256))
     session.add_point(100, 100, is_foreground=True)

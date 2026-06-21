@@ -122,7 +122,7 @@ def test_sam2_memory():
     labels = torch.tensor([[1]])
 
     with torch.no_grad():
-        r1 = model(x, points=(coords, labels), use_memory=True)
+        _r1 = model(x, points=(coords, labels), use_memory=True)
         r2 = model(x, use_memory=True)
     assert r2["masks"].shape[0] == 1
 
