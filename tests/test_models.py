@@ -30,6 +30,4 @@ def test_model_relative_sizes():
         param_counts.append(params)
 
     for i in range(1, len(param_counts)):
-        assert param_counts[i] > param_counts[i - 1], (
-            f"Model {sizes[i]} should have more params than {sizes[i-1]}"
-        )
+        assert param_counts[i] > param_counts[i - 1], f"Model {sizes[i]} should have more params than {sizes[i - 1]}"

@@ -7,8 +7,12 @@ def test_sam_image_encoder():
     from flashseg.models.architectures.sam import SAMImageEncoder
 
     encoder = SAMImageEncoder(
-        img_size=64, patch_size=8, embed_dim=64,
-        depth=2, num_heads=4, out_channels=32,
+        img_size=64,
+        patch_size=8,
+        embed_dim=64,
+        depth=2,
+        num_heads=4,
+        out_channels=32,
     )
     encoder.eval()
     x = torch.randn(1, 3, 64, 64)
@@ -57,9 +61,13 @@ def test_sam_full():
     from flashseg.models.architectures.sam import SAM
 
     model = SAM(
-        img_size=64, patch_size=8, embed_dim=64,
-        encoder_depth=2, num_heads=4,
-        decoder_embed_dim=32, num_mask_tokens=3,
+        img_size=64,
+        patch_size=8,
+        embed_dim=64,
+        encoder_depth=2,
+        num_heads=4,
+        decoder_embed_dim=32,
+        num_mask_tokens=3,
     )
     model.eval()
 
@@ -77,9 +85,13 @@ def test_sam_predict():
     from flashseg.models.architectures.sam import SAM
 
     model = SAM(
-        img_size=64, patch_size=8, embed_dim=64,
-        encoder_depth=2, num_heads=4,
-        decoder_embed_dim=32, num_mask_tokens=3,
+        img_size=64,
+        patch_size=8,
+        embed_dim=64,
+        encoder_depth=2,
+        num_heads=4,
+        decoder_embed_dim=32,
+        num_mask_tokens=3,
     )
     x = torch.randn(1, 3, 64, 64)
     result = model.predict(x, multimask=False)
@@ -90,10 +102,15 @@ def test_sam2_forward():
     from flashseg.models.architectures.sam2 import SAM2
 
     model = SAM2(
-        img_size=64, patch_size=8, embed_dim=64,
-        encoder_depth=2, num_heads=4,
-        decoder_embed_dim=32, num_mask_tokens=3,
-        memory_size=3, memory_tokens=16,
+        img_size=64,
+        patch_size=8,
+        embed_dim=64,
+        encoder_depth=2,
+        num_heads=4,
+        decoder_embed_dim=32,
+        num_mask_tokens=3,
+        memory_size=3,
+        memory_tokens=16,
     )
     model.eval()
 
@@ -109,10 +126,15 @@ def test_sam2_memory():
     from flashseg.models.architectures.sam2 import SAM2
 
     model = SAM2(
-        img_size=64, patch_size=8, embed_dim=64,
-        encoder_depth=2, num_heads=4,
-        decoder_embed_dim=32, num_mask_tokens=3,
-        memory_size=3, memory_tokens=16,
+        img_size=64,
+        patch_size=8,
+        embed_dim=64,
+        encoder_depth=2,
+        num_heads=4,
+        decoder_embed_dim=32,
+        num_mask_tokens=3,
+        memory_size=3,
+        memory_tokens=16,
     )
     model.eval()
 
