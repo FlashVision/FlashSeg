@@ -8,6 +8,8 @@ from flashseg.engine.predictor import Predictor
 from flashseg.engine.trainer import Trainer
 from flashseg.engine.validator import Validator
 from flashseg.models.build import build_model
+from flashseg.models.architectures import SAM, SAM2, Mask2Former
+from flashseg.tasks import InstanceSegmentor, PanopticSegmentor, InteractiveSegmentor
 
 __all__ = [
     "__version__",
@@ -17,4 +19,10 @@ __all__ = [
     "Predictor",
     "Exporter",
     "Validator",
+    "SAM",
+    "SAM2",
+    "Mask2Former",
+    "InstanceSegmentor",
+    "PanopticSegmentor",
+    "InteractiveSegmentor",
 ]
